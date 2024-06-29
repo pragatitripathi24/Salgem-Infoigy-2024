@@ -1,0 +1,76 @@
+.analytices_customers_logo_area {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #121212;
+  }
+  
+  .container.custom_container {
+    width: 100%;
+    max-width: 1329px;
+    margin: 10px auto;
+  }
+  
+  .analytices_logo_content .hosting_title {
+    margin-bottom: 20px;
+  }
+  
+  .analytices_logo_content .subtitle {
+    margin-top: -38px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 23px;
+    color: #dfeef0;
+  }
+  
+  .analytices_logo_content .f_700 {
+    font-weight: 700;
+  }
+  
+  .analytices_logo_content .t_color3 {
+    color: #ffffff;
+  }
+  
+  .analytices_logo_content .titleborder {
+    position: relative;
+  }
+  
+  .analytices_logo_content .titleborder::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #adb8b9;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+  }
+  
+  .client_logo_slider {
+    padding-top: 20px;
+    overflow: hidden; /* Hide overflow to keep logos within container */
+    white-space: nowrap; /* Ensure logos stay in a single row */
+  }
+  
+  .logo-list {
+    display: inline-flex; 
+    gap: 34px;
+    padding-left: 0; 
+    animation: slide 14s linear infinite; 
+  }
+  
+  .logo-list img {
+    border-radius: 10px;
+    max-height: 129px;
+    object-fit: contain;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

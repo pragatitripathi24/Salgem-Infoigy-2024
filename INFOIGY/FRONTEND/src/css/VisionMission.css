@@ -1,0 +1,114 @@
+.VM {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+  padding: 50px 20px; /* Adjust padding for smaller screens */
+}
+
+.circles-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow circles to wrap to the next line on smaller screens */
+  gap: 94px; /* Adjust gap between circles */
+  justify-content: center; /* Center align circles */
+}
+
+.circle-wrapper {
+  position: relative;
+  flex: 1 1 300px; /* Adjust width of circle wrappers */
+  max-width: 315px; /* Maximum width of each circle wrapper */
+}
+
+.circle {
+  width: 100%;
+  height: 304px; /* Fixed height for circles */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1), inset 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Expand inner circle on hover */
+.circle:hover {
+  transform: scale(1.05); 
+}
+
+.outer-circle {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: calc(100% + 40px); /* Adjusted width for outer circle */
+  height: calc(100% + 40px); /* Adjusted height for outer circle */
+  border-radius: 50%;
+  background: #085972;
+  z-index: 0;
+  transition: transform 0.3s;
+  transform-origin: center;
+  pointer-events: none; /* Ensure outer circle doesn't intercept hover events */
+}
+
+/* Expand outer circle when inner circle is hovered */
+.circle-wrapper:hover .outer-circle {
+  transform: scale(1.1);
+}
+
+.circle-content {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.circle-content img {
+  width: 108px;
+  height: 104px;
+  margin-bottom: 10px; /* Adjust margin for better spacing */
+}
+
+.circle-content h3 {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 20px;
+  color: #00a2c2;
+}
+
+.circle-content p {
+  padding: 15px; /* Adjust padding for better readability */
+  font-size: 16px;
+  color: #060606;
+  font-weight: 100;
+}
+
+@media (max-width: 768px) {
+  .circles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circle-wrapper {
+    flex: 1 1 100%; /* Full width for circle wrappers on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+    margin-bottom: 20px; /* Add margin between circle rows */
+  }
+
+  .outer-circle {
+    width: 100%;
+    height: 100%;
+  }
+}

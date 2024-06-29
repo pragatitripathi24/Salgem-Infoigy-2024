@@ -1,0 +1,22 @@
+.footer {
+    padding: 40px 0;
+    background-color: #020230;
+    color: white;
+  }
+  
+  .footer-logo {
+    max-width: 150px;
+    margin: 0 auto; /* Center the logo horizontally */
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-icon a img {
+    width: 30px;
+    height: 30px;
+  }
+  

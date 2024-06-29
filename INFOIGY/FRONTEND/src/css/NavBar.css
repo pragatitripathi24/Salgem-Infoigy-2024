@@ -1,0 +1,26 @@
+.navbar-link {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-link:hover::after {
+    width: 70%;
+  }
+  
+  .navbar-link.active::after {
+    width: 70%;
+  }
+  

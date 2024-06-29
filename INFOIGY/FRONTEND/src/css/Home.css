@@ -1,0 +1,156 @@
+/* Home.css */
+.learn-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 7px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: small;
+  position: relative; /* Needed to position pseudo-elements */
+  overflow: hidden; /* To ensure the pseudo-elements don't overflow */
+  transition: color 0.3s; /* Transition for text color */
+  
+}
+
+.learn-more-button::before,
+.learn-more-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: white;
+  z-index: -1; /* Ensure it is behind the text */
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Position left half */
+.learn-more-button::before {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+/* Position right half */
+.learn-more-button::after {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.learn-more-button:hover::before {
+  transform: translateX(0);
+}
+
+.learn-more-button:hover::after {
+  transform: translateX(0);
+}
+
+.learn-more-button:hover {
+  color: black; /* Change text color on hover */
+}
+
+/*Carousels*/
+
+.carousel-slide {
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.carousel .control-dots .dot {
+  background: transparent;
+  border: none;
+  width: 16px; /* Adjust as needed */
+  height: 2px;  /* Adjust as needed */
+  margin: 0 4px;
+  position: relative;
+}
+
+.carousel .control-dots .dot {
+  background: transparent;
+  border: none;
+  width: 30px; /* Adjust the width as needed */
+  height: 9px;  /* Adjust the height as needed */
+  margin: 0 8px; /* Adjust the margin as needed */
+  position: relative;
+}
+
+.carousel .control-dots .dot::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-top: 3px dashed white; /* Adjust the size and color as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .control-dots .dot.selected::before,
+.carousel .control-dots .dot:hover::before {
+  border-top: 3px solid white; /* Adjust the color as needed */
+}
+
+.carousel-slide {
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.carousel-content h1 {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.carousel-content p {
+  margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+.carousel .control-dots .dot {
+  background: transparent;
+  border: none;
+  width: 30px; /* Adjust the width as needed */
+  height: 9px;  /* Adjust the height as needed */
+  margin: 0 8px; /* Adjust the margin as needed */
+  position: relative;
+}
+
+.carousel .control-dots .dot::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-top: 3px dashed white; /* Adjust the size and color as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .control-dots .dot.selected::before,
+.carousel .control-dots .dot:hover::before {
+  border-top: 3px solid white; /* Adjust the color as needed */
+}

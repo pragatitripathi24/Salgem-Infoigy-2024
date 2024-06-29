@@ -1,0 +1,129 @@
+.main-content {
+    padding: 20px;
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slideshow-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slides {
+    display: flex;
+  }
+  
+  .slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: none;
+  }
+  
+  .slide.is-active {
+    opacity: 1;
+    display: block;
+  }
+  
+  .slide-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .caption .title {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .caption .text p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-container {
+    width: 100%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  
+  .item {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .item.is-active {
+    background-color: #007bff;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .arrow {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .arrow.prev {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .arrow.next {
+    position: absolute;
+    right: 10px;
+  }
+  
